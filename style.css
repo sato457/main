@@ -1,0 +1,445 @@
+@charset "UTF-8";
+*{
+	box-sizing:border-box;
+	margin:0px;
+	padding:0px;
+	font-size:100%;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	color:#000;
+	font-family:"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+	font-size:18px;
+	line-height:2;
+}
+.cacth{
+	font-size:2rem;
+	color:blue;
+	font-weight:bold;
+}
+.yesnoBox img,
+.ai img{
+	border:none;
+	max-width:50%;
+	height:auto;
+}
+.worksBox img{
+	max-width:100%;
+}
+a{
+	color:#666;
+	text-decoration:none;
+	transition:0.3s;
+}
+.text-center{
+	text-align:center;
+}
+.text-right{
+	text-align:right;
+}
+.text-left{
+	text-align:left;
+}
+.m-auto{
+	margin:auto;
+}
+#container{
+	max-width:1400px;
+	margin:0 auto;
+	padding:0;
+}
+header{
+	padding:10px 20px;
+}
+header #logo img{
+	width:140px;
+}
+footer{
+	text-align:center;
+	padding:30px 0px 10px;
+	font-size:0.8rem;
+}
+
+
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	#container{width:auto;}
+	footer{text-align:center; padding:10px;}
+	.break-sm{display:block;}
+}
+
+
+/*トップの動画と文字*/
+.hero{
+	position:relative;
+	height:100vh;
+}
+.hero::before{
+	position:absolute;
+	content:"";
+	background:rgba(0,0,0,0);
+	top:0;
+	right:0;
+}
+.heroT{
+	position:absolute;
+	top:5%;
+	left:3%;
+	font-size:6rem;
+	font-weight:bold;/*太字*/
+	display: inline-block;
+	/*背景にグラデ*/
+	background: #fc466b;
+	background: -webkit-linear-gradient(to right, #fc466b, #3f5efb);
+	background: linear-gradient(to right, #fc466b, #3f5efb);
+	/*背景を文字の形に切り取り*/
+	-webkit-background-clip: text;
+	/*文字を透過*/
+	-webkit-text-fill-color: transparent;
+}
+.heroT_2{
+	position:absolute;
+	top:60%;
+	left:60%;
+}
+.heroMov{
+	position:absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	z-index:-1;
+}
+.heroMov video{
+	position:absolute;
+	min-width:100%;
+	min-height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.mainLayer{height:auto;}
+	.mainLayer .layer-txt{font-size:2.2rem; padding:40px 10px;}
+	.mainLayer .layer-bg{width:auto; height:460px; position:initial;}
+	.btnContactArea2 a.btn_black{max-width:100%; padding:1.5rem 1.2rem;}
+	.btnContactArea2 a.btn_black span.top__text{font-size:1.2rem;}
+}
+
+.problem{
+	background: linear-gradient(45deg, #05FBFF,40%, #1D62F0);/*角度70,青の単色グラデーション　(0degは垂直,90degは水平)*/
+	background-size: 180% 180%;/*見えてる範囲より大きいサイズのグラデーション背景にして、*/
+	animation: bggradient 4s ease infinite;/*背景の位置をずらすことで色を変化させる*/
+	font-size:1.2rem;
+	color:#fff;
+	padding:80px 50px;
+}
+@keyframes bggradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.btn_minidive{
+	font-size:2rem;
+	color:#FFEF8D;
+	margin-top:100px;
+}
+.under{
+	text-decoration: underline;
+}
+
+.problem h2{
+	font-size:3rem;
+	font-weight:bold;
+	margin-top:50px;
+	margin-bottom:10px;
+}
+.problem h3{
+	font-size:3rem;
+	font-weight:bold;
+	margin-top:100px;
+	margin-bottom:10px;
+}
+.problem h4{
+	font-size:2rem;
+	font-weight:bold;
+	color:#FFEF8D;
+}
+.problem h5{
+	font-size:1.2rem;
+	font-weight:bold;
+	color:#1755aa;
+	background:#FFEF8D;
+	display:inline-block;
+	padding:10px 20px;
+	margin-top:50px;
+	margin-bottom:10px;
+}
+.ai{
+	display:flex;
+	width:90%;
+} 
+.ai img{
+	margin:30px;
+}
+.problem .yesnoRow{
+	display:flex;
+	justify-content:space-between;
+	margin-top:100px;
+}
+.problem .yesnoBox{
+	width:50%;
+	border:solid 2px #FFEF8D;
+	padding:50px;
+	margin:0 15px;
+}
+.problem .yes{
+	color:#000;
+	border:solid 2px #FFEF8D;
+}
+.problem .yes h4{
+	color:#FFEF8D;
+}
+.problem .yes h5{
+	background:#FFEF8D;
+}
+.yesnoBox img{
+	margin-top:50px;
+}
+/*スマホ用の調節*/
+@media screen and (max-width:767px){
+	.problem{padding:50px 20px;}
+	.problem h2{font-size:2.4rem; color:#ff0; line-height:1.2; margin-bottom:20px;}
+	.problem h3{font-size:2.2rem; color:#ff0; line-height:1.2; margin-bottom:20px;}
+	.problem img .ai{width:30%;}
+	.problem .yesnoRow{display:block;}
+	.problem .yesnoBox{width:100%; padding:20px; margin:0 0 50px 0;}
+}
+
+.howto{
+	font-size:2.2rem;
+	color:#1755aa;
+	padding:50px 30px;
+	margin:auto;
+	width:90%;
+}
+.howto h2{
+	font-size:3.2rem;
+	font-weight:bold;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:50px 0;
+}
+.howto h2::before, .howto h2::after{
+	content:'';
+	width:3px;
+	height:60px;
+	background:#1755aa;
+}
+.howto h2::before{
+	margin-right:30px;
+	transform:rotate(-35deg);
+}
+.howto h2::after{
+	margin-left:30px;
+	transform:rotate(35deg);
+}
+.howto dl{
+	padding:0px 0px;
+	margin-bottom:20px;
+}
+.howto dt{
+	font-size:1.8rem;
+	font-weight:bold;
+	background:#FFEF8D;
+	padding:10px 20px;
+}
+.howto dd{
+	font-size:1.2rem;
+	margin-bottom:50px;
+}
+
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.howto{padding:0; width:98%;}
+	.howto h2{font-size:1.8rem; padding:20px 0;}
+	.howto dt{font-size:1.4rem;}
+	.howto dd{padding:20px;}
+}
+
+.works{
+	font-size:2.2rem;
+	color:#000;
+	padding:50px 30px;
+}
+.works h2{
+	font-size:3.2rem;
+	font-weight:bold;
+	text-align:center;
+}
+.worksRow{
+	margin:50px;
+	display:flex;
+}
+.worksBox{
+	width:calc(100%/3);
+	padding:0 20px;
+	font-size:1.3rem;
+	line-height:2rem;
+}
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.works h2{font-size:2.2rem;}
+	.works p{font-size:1.2rem;}
+	.works .worksRow .worksBox{padding:0 5px;}
+}
+
+.faq{
+	background: linear-gradient(60deg,#1D62F0,60%,#05FBFF);/*角度70,青の単色グラデーション　(0degは垂直,90degは水平)*/
+	font-size:1.2rem;
+	color:#fff;
+	padding:50px 30px;
+}
+.faq h2{
+	font-size:2.8rem;
+	font-weight:bold;
+	text-align:center;
+}
+.faqList{
+	padding:50px;
+}
+.faq .faqTitle{
+	font-size:1.8rem;
+	font-weight:bold;
+}
+.faq .faqDetail{ }
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.faq{padding:30px 20px;}
+	.faq h2{font-size:2.2rem; color:#ff0;}
+	.faqList{padding:0px 0px 50px 0px;}
+}
+
+.cta{
+	padding:50px 30px;
+}
+.cta h2{
+	font-size:2.8rem;
+	font-weight:bold;
+	text-align:center;
+}
+.cta h3{
+	font-size:1.8rem;
+	font-weight:bold;
+	text-align:center;
+}
+.cta p{
+	text-align:center;
+}
+.cta form{
+	max-width:420px;
+	margin:50px auto;
+}
+.cta .feedback-input{
+	border-radius:5px;
+	border:2px solid #1755aa;
+	padding:16px;
+	margin-bottom:15px;
+	width:100%;
+}
+.cta .feedback-input:focus{
+	border:2px solid #000;
+}
+.ct textarea{
+	height:150px;
+	line-height:150%;
+	resize:vertical;
+}
+[type="submit"]{
+	width:100%;
+	background:#1755aa;
+	border-radius:5px;
+	border:0;
+	cursor:pointer;
+	color:#fff;
+	font-size:24px;
+	padding:10px 0px;
+	transition:all 0.3s;
+}
+[type="submit"]:hover{
+	background:#FFEF8D;
+	color:#1755aa;
+}
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.cta{padding:30px 20px;}
+	.cta h2{font-size:1.8rem;}
+}
+
+.download{
+	background:#ccc;
+	padding:100px 20px;
+}
+.download h2{
+	font-size:2.8rem;
+	font-weight:bold;
+	text-align:center;
+}
+.download h3{
+	font-size:1.2rem;
+	font-weight:bold;
+	text-align:center;
+}
+.download p{
+	text-align:center;
+	padding:20px;
+}
+
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.download{padding:50px 20px;}
+	.download h2{font-size:1.8rem;}
+	.download h3{text-align:left;}
+	.download p{text-align:left;}
+}
+
+.btnContactArea{
+	margin:20px 0;
+}
+.btnContactArea a.btn_blue{
+	display:block;
+	padding:1.5rem 3.0rem;
+	border-radius:8px;
+	transition:0.3s;
+	max-width:580px;
+	background:#1755aa;
+}
+.btnContactArea a.btn_blue span.bl__text{
+	display:block;
+	position:relative;
+	text-align:center;
+	color:#fff;
+	font-size:1.8rem;
+}
+a.btn_blue:hover{
+	background:#FFEF8D;
+}
+.btnContactArea a.btn_blue span.bl__text:hover{
+	color:#1755aa;
+}
+/*スマホ用の調整*/
+@media screen and (max-width:767px){
+	.btnContactArea a.btn_blue{max-width:100%; padding:1.5rem 1.2rem;}
+	.btnContactArea a.btn_blue span.bl__text{font-size:1.2rem;}
+}
