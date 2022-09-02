@@ -14,11 +14,19 @@ body{
 	font-size:18px;
 	line-height:2;
 }
-
-img{
+.cacth{
+	font-size:2rem;
+	color:blue;
+	font-weight:bold;
+}
+.yesnoBox img,
+.ai img{
 	border:none;
 	max-width:50%;
 	height:auto;
+}
+.worksBox img{
+	max-width:100%;
 }
 a{
 	color:#666;
@@ -53,10 +61,7 @@ footer{
 	padding:30px 0px 10px;
 	font-size:0.8rem;
 }
-footer .footer-logo{
-	width:100px;
-	margin:50px auto;
-}
+
 
 /*スマホ用の調整*/
 @media screen and (max-width:767px){
@@ -283,19 +288,15 @@ footer .footer-logo{
 	font-weight:bold;
 	text-align:center;
 }
-.works .worksRow{
+.worksRow{
 	margin:50px;
 	display:flex;
-	justify-content:space-between;
 }
-.works .worksRow .worksBox{
+.worksBox{
 	width:calc(100%/3);
 	padding:0 20px;
 	font-size:1.3rem;
 	line-height:2rem;
-}
-.worksBox img{
-	width:100%;
 }
 /*スマホ用の調整*/
 @media screen and (max-width:767px){
@@ -442,4 +443,3 @@ a.btn_blue:hover{
 	.btnContactArea a.btn_blue{max-width:100%; padding:1.5rem 1.2rem;}
 	.btnContactArea a.btn_blue span.bl__text{font-size:1.2rem;}
 }
-
